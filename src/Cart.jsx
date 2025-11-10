@@ -14,7 +14,7 @@ const Cart = () => {
   const fetchCart = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("https://server-vjpl.onrender.com/cart", {
+      const res = await axios.get("https://server1-rose.vercel.app/cart", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const cart = res.data.cart || [];
@@ -30,7 +30,7 @@ const Cart = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `https://server-vjpl.onrender.com/update-quantity/${productId}`,
+        `https://server1-rose.vercel.app/update-quantity/${productId}`,
         { action },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -44,7 +44,7 @@ const Cart = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.delete(
-        `https://server-vjpl.onrender.com/remove-from-cart/${productId}`,
+        `https://server1-rose.vercel.app/remove-from-cart/${productId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

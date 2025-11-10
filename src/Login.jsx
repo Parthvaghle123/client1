@@ -31,7 +31,7 @@ const Login = ({ setUsername }) => {
     setLoading(true);
 
     axios
-      .post("https://server-vjpl.onrender.com/login", {
+      .post("https://server1-rose.vercel.app/login", {
         email: emailInput.toLowerCase(),
         password,
       })

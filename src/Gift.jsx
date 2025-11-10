@@ -134,7 +134,7 @@ const Item = () => {
     }
     try {
       await axios.post(
-        "https://server-vjpl.onrender.com/add-to-cart",
+        "https://server1-rose.vercel.app/add-to-cart",
         {
           productId: product.id,
           image: product.image,

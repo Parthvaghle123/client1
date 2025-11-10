@@ -26,7 +26,7 @@ const Check = () => {
       if (!token) return;
 
       try {
-        const res = await axios.get("https://server-vjpl.onrender.com/user/profile", {
+        const res = await axios.get("https://server1-rose.vercel.app/user/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setFormData((prev) => ({
@@ -133,7 +133,7 @@ const placeOrder = async (e) => {
       cardNumber: rawCardNumber,
     };
 
-      await axios.post("https://server-vjpl.onrender.com/order", payload, {
+      await axios.post("https://server1-rose.vercel.app/order", payload, {
       headers: { Authorization: `Bearer ${token}` },
     });
 
